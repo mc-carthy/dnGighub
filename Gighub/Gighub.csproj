@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201709072108540_DecorateNonNullablePropertiesForGigsAndGenres.Designer.cs">
       <DependentUpon>201709072108540_DecorateNonNullablePropertiesForGigsAndGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709072115007_SeedGenres.cs" />
+    <Compile Include="Migrations\201709072115007_SeedGenres.Designer.cs">
+      <DependentUpon>201709072115007_SeedGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -301,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709072108540_DecorateNonNullablePropertiesForGigsAndGenres.resx">
       <DependentUpon>201709072108540_DecorateNonNullablePropertiesForGigsAndGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709072115007_SeedGenres.resx">
+      <DependentUpon>201709072115007_SeedGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
