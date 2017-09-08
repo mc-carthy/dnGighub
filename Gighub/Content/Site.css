@@ -34,6 +34,34 @@ textarea {
     color: #ffffff;
 }
 
-.body, h1, h2, h3, h4, h5, h6 {
+body {
+    font-size: 17px;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    font-size: 17px;
+    padding: 20px 15px;
+    border-radius: 10px;
+    -ms-border-radius: 10px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: #2196f3;
+}
+
+.btn {
+    font-size: 17px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    -ms-border-radius: 10px;
 }
