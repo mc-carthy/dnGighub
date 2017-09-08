@@ -8,6 +8,7 @@ namespace Gighub.ViewModels
     public class GigFormViewModel
     {
         [Required]
+        [FutureDate]
         public string Date { get; set; }
 
         [Required]
