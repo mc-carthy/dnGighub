@@ -205,6 +205,7 @@
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Dtos\FollowingDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -236,8 +237,13 @@
     <Compile Include="Migrations\201709121518276_CreateAttendanceIntermediaryModel.Designer.cs">
       <DependentUpon>201709121518276_CreateAttendanceIntermediaryModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709131758592_AddFollowings.cs" />
+    <Compile Include="Migrations\201709131758592_AddFollowings.Designer.cs">
+      <DependentUpon>201709131758592_AddFollowings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attendance.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709121518276_CreateAttendanceIntermediaryModel.resx">
       <DependentUpon>201709121518276_CreateAttendanceIntermediaryModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709131758592_AddFollowings.resx">
+      <DependentUpon>201709131758592_AddFollowings.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
