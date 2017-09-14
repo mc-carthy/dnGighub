@@ -22,6 +22,11 @@ namespace Gighub.Controllers.Api
 
             var gig = _context.Gigs.Single(g => g.Id == id && g.ArtistId == currentUserId);
 
+            if (gig.IsCancelled)
+            {
+                return NotFound();
+            }
+
             gig.IsCancelled = true;
             _context.SaveChanges();
 
