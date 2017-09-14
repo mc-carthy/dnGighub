@@ -22,11 +22,6 @@ namespace Gighub.Controllers.Api
 
             var gig = _context.Gigs.Single(g => g.Id == id && g.ArtistId == currentUserId);
 
-            if (gig != null)
-            {
-                return BadRequest("Gig not found or not authorised to cancel this gig.");
-            }
-
             gig.IsCancelled = true;
             _context.SaveChanges();
 
