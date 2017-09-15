@@ -46,5 +46,21 @@ namespace Gighub.Models
                 attendee.Notifiy(notification);
             }
         }
+
+        public void Modify(string venue, DateTime dateTime, byte genre)
+        {
+            var notification = new Notification(NotificationType.GigUpdated, this);
+            notification.OriginalVenue = Venue;
+            notification.OriginalDateTime = DateTime;
+
+            Venue = venue;
+            DateTime = dateTime;
+            GenreId = genre;
+
+            foreach (var attendee in Attendances.Select(a => a.Attendee))
+            {
+                attendee.Notifiy(notification);
+            }
+        }
     }
 }
