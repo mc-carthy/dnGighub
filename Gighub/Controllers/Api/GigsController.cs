@@ -1,6 +1,5 @@
 ﻿using Gighub.Models;
 using Microsoft.AspNet.Identity;
-using System;
 using System.Linq;
 using System.Web.Http;
 
@@ -30,12 +29,7 @@ namespace Gighub.Controllers.Api
 
             gig.IsCancelled = true;
 
-            var notification = new Notification
-            {
-                DateTime = DateTime.Now,
-                Gig = gig,
-                Type = NotificationType.GigCancelled
-            };
+            var notification = new Notification(NotificationType.GigCancelled, gig);
 
             var attendees = _context.Attendances
                 .Where(a => a.GigId == gig.Id)
