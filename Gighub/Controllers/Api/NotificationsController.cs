@@ -1,4 +1,5 @@
 ﻿using Gighub.Models;
+using Gighub.Models.Dtos;
 using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -16,7 +17,7 @@ namespace Gighub.Controllers.Api
         {
             _context = new ApplicationDbContext();
         }
-        public IEnumerable<Notification> GetNewNotifications()
+        public IEnumerable<NotificationDto> GetNewNotifications()
         {
             var currentUserId = User.Identity.GetUserId();
             var notifications = _context.UserNotifications
