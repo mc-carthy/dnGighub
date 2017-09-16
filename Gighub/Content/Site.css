@@ -53,6 +53,17 @@ textarea {
     border-color: #ff4342;
 }
 
+.navbar-inverse .notifications {
+    position: relative;
+}
+
+.navbar-inverse .notifications .badge {
+    position: absolute;
+    top: 10px;
+    right: -2px;
+    background: #a80a0a;
+}
+
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > .dropdown > a .caret,
 .navbar-inverse .navbar-brand {
