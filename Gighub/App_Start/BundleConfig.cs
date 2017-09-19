@@ -7,8 +7,11 @@ namespace Gighub
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+            bundles.Add(new ScriptBundle("~/bundles/lib").Include(
                         "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/bootbox.min.js",
+                        "~/Scripts/bootstrap.js",
+                        "~/Scripts/respond.js",
                         "~/Scripts/moment.js",
                         "~/Scripts/underscore-min.js"));
 
@@ -19,11 +22,6 @@ namespace Gighub
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                        "~/Scripts/bootbox.min.js",
-                        "~/Scripts/bootstrap.js",
-                        "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/animate.css",
