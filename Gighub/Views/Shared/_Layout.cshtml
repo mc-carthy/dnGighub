@@ -40,11 +40,11 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     <script id="notifications-template"type="text/x-template">
-        <ul>
+        <ul class="notifications">
             <%
                 _.each(notifications, function(notification){
                     if (notification.type == 1) { %>
-                        <li><%= notification.gig.artist.name %> has canceled the gig at <%= notification.gig.venue %> at <%= notification.gig.dateTime %>.</li>
+                        <li><span class="highlight"><%= notification.gig.artist.name %></span> has canceled the gig at <%= notification.gig.venue %> at <%= notification.gig.dateTime %>.</li>
                     <% }
 
                     else if (notification.type == 2) {
@@ -65,7 +65,7 @@
                     }
 
                     %>
-                        <li><%= notification.gig.artist.name %> has changed the <%= changes.join(' and ') %> of the gig from <%= originalValues.join('/') %> to <%= newValues.join('/') %></li>
+                        <li><span class="highlight"><%= notification.gig.artist.name %></span> has changed the <%= changes.join(' and ') %> of the gig from <%= originalValues.join('/') %> to <%= newValues.join('/') %></li>
                     <%
                     }
                 })
@@ -91,7 +91,8 @@
                         var compiled = _.template($("#notifications-template").html())
                         return compiled({ notifications: notifications });
                     },
-                    placement: "bottom"
+                    placement: "bottom",
+                    template: '<div class="popover popover-notifications" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
                 });
             });
         });
